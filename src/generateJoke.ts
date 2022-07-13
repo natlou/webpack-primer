@@ -1,3 +1,3 @@
 export const generateJoke = () => {
-    return ("youza bitch");
+    return ("I didn’t get a haircut, I got them all cut.");
 }

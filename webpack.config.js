@@ -4,6 +4,7 @@
 const path = require('path');
 
 module.exports = {
+    mode: 'development',
     entry: './src/index.ts', // entry point for webpack, 
     // the first file it looks at and compiles, but it will compile and import dependencies
     // first file in the tree.
