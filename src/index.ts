@@ -1,4 +1,4 @@
 import { generateJoke } from './generateJoke';
-import './styles/main.scss'
+import './styles/main.scss';
 
 console.log(generateJoke());
