@@ -30,13 +30,15 @@ module.exports = {
     output: {
         filename: 'bundle.js',
         path: path.resolve(__dirname, 'dist'), // absolute path, not relative, this goes to __dirname = webpack.config.js, then goes to dist folder
+        clean: true,
     },
+    devtool: 'source-map',
     devServer: {
         static: {
             directory: path.resolve(__dirname, 'dist')
         },
         port: 3000, 
-        open: true, 
+        open: true, // opens it automatically
         hot: true,
         compress: true, 
         historyApiFallback: true, 
