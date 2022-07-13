@@ -5,7 +5,7 @@ const path = require('path');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 
 module.exports = {
-    mode: 'development',
+    mode: 'production',
     entry: './src/index.ts', // entry point for webpack, 
     // the first file it looks at and compiles, but it will compile and import dependencies
     // first file in the tree.
