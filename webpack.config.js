@@ -13,7 +13,9 @@ module.exports = {
         rules: [ 
             { // rule to transpile typescipt into javascript
                 test: /\.ts$/, //needs to pass test to transpile (checks if it is typescipt file) $ checks if .ts is at the end of the file
-                use: 'ts-loader', // typescript transpiler
+                use: {
+                    loader: 'ts-loader', // typescript transpiler
+                }, 
                 exclude: /node_modules/,
                 include: [path.resolve(__dirname, 'src')] // only use files from source folder
             },
