@@ -19,5 +19,8 @@ module.exports = {
     output: {
         filename: 'bundle.js',
         path: path.resolve(__dirname, 'dist'), // absolute path, not relative, this goes to __dirname = webpack.config.js, then goes to dist folder
+    },
+    resolve: {
+        extensions: ['.ts', '.js'],
     }
 }
