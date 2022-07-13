@@ -26,6 +26,10 @@ module.exports = {
                     'css-loader',
                     'sass-loader'
                 ],
+            },
+            {
+                test:/\.(png|svg|jpg|jpeg|gif)$/i,
+                type: 'asset/resource',
             }
         ]
     },
@@ -33,6 +37,7 @@ module.exports = {
         filename: 'bundle.js',
         path: path.resolve(__dirname, 'dist'), // absolute path, not relative, this goes to __dirname = webpack.config.js, then goes to dist folder
         clean: true,
+        assetModuleFilename: '[name][ext]',
     },
     devtool: 'source-map',
     devServer: {
