@@ -31,6 +31,16 @@ module.exports = {
         filename: 'bundle.js',
         path: path.resolve(__dirname, 'dist'), // absolute path, not relative, this goes to __dirname = webpack.config.js, then goes to dist folder
     },
+    devServer: {
+        static: {
+            directory: path.resolve(__dirname, 'dist')
+        },
+        port: 3000, 
+        open: true, 
+        hot: true,
+        compress: true, 
+        historyApiFallback: true, 
+    },
     resolve: {
         extensions: ['.tsx', '.ts', '.js'],
     },
@@ -38,6 +48,7 @@ module.exports = {
         new HtmlWebpackPlugin({
             title: 'Webpack Primer',
             filename: 'index.html',
+            template: 'src/template.html', // template for html generation
         }),
     ],
 }
