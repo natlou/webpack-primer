@@ -1,0 +1,3 @@
+const generateJoke = () => {
+    return ("");
+}
